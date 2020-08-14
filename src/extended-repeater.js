@@ -37,6 +37,10 @@ function additionString(options) {
 
 module.exports =
   function repeater(str, options) {
+    str = String(str);
+    if (options.addition !== undefined) {
+      options.addition = String(options.addition);
+    }
 
     if (options.additionRepeatTimes === undefined) {
       options.additionRepeatTimes = 1;
